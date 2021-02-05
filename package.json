@@ -11,12 +11,17 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/cloudinary": "^1.0.3-beta-3",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/strapi": "^0.1.9",
     "@stripe/stripe-js": "^1.11.0",
     "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
     "nuxt": "^2.14.6",
+    "util": "^0.12.3",
     "vue-swal": "^1.0.0"
   },
   "devDependencies": {
