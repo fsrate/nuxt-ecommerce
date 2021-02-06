@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div>
     <div
@@ -30,6 +31,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 import { mapActions } from 'vuex'
 export default {
   name: 'Products',

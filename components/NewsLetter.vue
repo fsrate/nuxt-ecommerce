@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div
     class="sm:flex mx-auto items-center m-10 justify-center space-x-6 sm:space-x-20 m-3 sm:m-6 mx-6"
@@ -22,6 +23,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 export default {
   name: 'NewsLetter',
   data() {

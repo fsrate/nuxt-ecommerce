@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div
     class="flex flex-col mt-10 sm:mt-0 sm:flex-row sm:items-center bg-primary text-white space-x-5 p-5 py-8 md:space-x-20 md:p-20 font-light text-sm"
@@ -22,6 +23,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 export default {
   name: 'Footer',
 }

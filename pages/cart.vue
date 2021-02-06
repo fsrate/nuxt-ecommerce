@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div>
     <Nav class="sticky top-0" />
@@ -42,6 +43,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 import { mapGetters, mapActions } from 'vuex'
 import { loadStripe } from '@stripe/stripe-js'
 export default {

@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div class="bg-primary ads flex justify-center items-center">
     <h3 class="text-white text-lg ml-6 sm:text-2xl font-bold">
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 export default {
   name: 'Ads',
 }

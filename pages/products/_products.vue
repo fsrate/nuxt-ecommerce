@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div>
     <Nav class="sticky top-0" />
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 export default {
   async asyncData({ $strapi, route }) {
     const id = route.params.products

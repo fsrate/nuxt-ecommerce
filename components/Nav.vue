@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div class="navbar flex text-white relative">
     <div class="nav-item-center flex space-x-6 sm:space-x-20 p-5 mx-auto">
@@ -21,6 +22,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 import { mapGetters } from 'vuex'
 export default {
   name: 'Nav',

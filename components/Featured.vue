@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div>
     <div
@@ -31,6 +32,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 // import axios from '@nuxtjs/axios'
 export default {
   name: 'Featured',

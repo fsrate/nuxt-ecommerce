@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div>
     <HeroSection />
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 import { mapGetters } from 'vuex'
 export default {
   async asyncData({ $strapi, store, error }) {

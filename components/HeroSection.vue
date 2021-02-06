@@ -1,3 +1,4 @@
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 <template>
   <div
     class="hero relative max-h-screen flex flex-col justify-center items-center text-center mx-auto bg-cover"
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 export default {
   name: 'HeroSection',
 }

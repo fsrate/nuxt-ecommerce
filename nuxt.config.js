@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 require('dotenv').config();
 
 export default {
@@ -84,7 +84,55 @@ export default {
     },
 
     cloudinary: {
-        cloudName: `${process.env.CLOUD_NAME}` || 'dc6apsdtu'
+        cloudName: `${process.env.CLOUD_NAME}` || 'dc6apsdtu',
+        apiKey: process.env.API_KEY || '137939413133749',
+        apiSecret: process.env.API_SECRET || '8hFdOpghWmm208SxHFubOX8ZcfE',
+        upload_preset: true
+    },
+
+    hooks: {
+        async upload(e, { store }) {
+            const fs = require('fs');
+            const { $axios } = require('@nuxtjs/axios');
+            const { $cloudinary } = require('@nuxtjs/cloudinary');
+
+            const user = store.state.auth.user;
+            const file = e.target.files[0];
+
+            const readData = (f) => new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onloadend = () => resolve(reader.result);
+                reader.readAsDataURL(f);
+            });
+
+            const data = await readData(file);
+
+            const options = {
+                timestamp: Date.now(),
+                cloud_name: `${process.env.CLOUD_NAME}`,
+                api_key: `${process.env.API_KEY}`,
+                public_id: `users/user-${user.id}/${data.file.name}`,
+                resouce_type: 'image',
+                tags: ['auto_upload'],
+                api_secret: `${process.env.API_SECRET}`
+            };
+
+            const signature = await $axios.post('generate_signature', `${data}`, {
+                ...options,
+                api_secret: `${process.env.API_SECRET}`
+            });
+
+            if (signature) {
+                const instance = await $cloudinary.upload(`user/${data}`, {
+                    ...options,
+                    signature,
+                }, function(error, result) {
+                    console.log(result);
+                });
+
+                return fs.readFileSync(`/upload/${instance}`);
+            }
+        }
     },
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)

@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable */ /* eslint-disable prettier/prettier */
 export const state = () => ({
     allProducts: [],
     featuredProducts: [],
@@ -18,8 +18,7 @@ export const getters = {
     getCart: (state) => state.cartItems,
     getCartTotal: (state) =>
         state.cartItems.length < 1 ?
-        '0' :
-        state.cartItems
+        '0' : state.cartItems
         .map((el) => el.price * el.quantity)
         .reduce((a, b) => a + b),
 }
