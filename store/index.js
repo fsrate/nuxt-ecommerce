@@ -8,6 +8,12 @@ export const state = () => ({
 })
 
 export const getters = {
+    isAuthenticated(state) {
+        return state.auth.loggedIn;
+    },
+    userLoggedIn(state) {
+        return state.auth.user;
+    },
     /*
       return items from store
     */
